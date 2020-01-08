@@ -196,8 +196,21 @@ header {
 }
 
 /*----------------------- */
+/* FEATURES */
+/*-----------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+/*----------------------- */
 /* MEALS */
 /*-----------------------*/
+
+.section-meals {
+    padding: 0;
+}
 
 .meals-showcase {
     list-style: none;
@@ -206,16 +219,26 @@ header {
 
 .meals-showcase li {
     display: block;
-    float: left; /*they will be side by side*/
+    float: left; /*they will be side by side with the first one starting on the left*/
     width: 25%; /*because there are 4 li elements and width is 100%*/
 }
 
 .meal-photo {
     width: 100%; /*means have exact width of parents, so li or 25%*/
     margin: 0;  
+    overflow: hidden;
+    background-color: #000; /*this darkens the background and gives the whole pictures a darker color with the opacity*/
 }
 
 .meal-photo img {
+    opacity: 0.7; /*another way to darken a picture. 0.7 is equivalent to 70% opacity, then with a black background color above it gives a darker image overall*/
     width: 100%;
     height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
