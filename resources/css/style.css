@@ -20,6 +20,16 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1}
+/*clears the floats so there isn't overlap*/
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /*----------------------- */
 /* REUSABLE COMPONENTS */
 /*-----------------------*/
@@ -241,4 +251,62 @@ header {
 .meal-photo img:hover {
     opacity: 1;
     transform: scale(1.03);
+}
+
+/*----------------------- */
+/* HOW IT WORKS */
+/*-----------------------*/
+.section-steps{
+    background-color: #f4f4f4;
+}
+.steps-box {
+    margin-top: 30px;
+}
+
+.steps-box:first-child {
+    text-align: right; /*works for inline elements, not just text*/
+    padding-right: 3%; /*adding percentage instead of pixels because this is more responsive*/
+    margin-top: 30px;
+}
+/*will pick the first child. Is a zero class. First of step boxes(left one)*/
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-steps {
+    margin-bottom: 50px;
+}
+
+.works-steps:last-of-type {
+    margin-bottom: 80px;
+} /*similar to last-child*/
+
+.works-steps div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    /*display: inline-block; this prevents element from forming line-break and element can be side-by-side to text*/
+    border-radius: 50%;
+    height: 50px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.need-space {
+    margin-top: 50px;
 }
