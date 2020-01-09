@@ -373,7 +373,33 @@ header {
 blockquote {
     padding: 2%;
     font-style: italic; /*already included in Google Fonts*/
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
 }
 
+blockquote:before {
+    content: "\201C"; /*Last time didn't see any text so left it black. Way to get large quotation marks around the blockquotes. This is an escaped unicode of glyph from CSS Tricks.*/
+    font-size: 500%;
+    display: block; /*so can have new line*/
+    position: absolute; /*if a position has absolute, then must make sure parent element has relative."*/
+    top: -5px;
+    left: -5px;
+
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block; /*move the photos from being on same line as quote*/
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+
+}
 
 
