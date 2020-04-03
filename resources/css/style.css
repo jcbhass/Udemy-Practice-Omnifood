@@ -195,6 +195,7 @@ input[type=submit] {
 /*----------------------- */
 /* HEADER */
 /*-----------------------*/
+
 header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.70)), to(rgba(0, 0, 0, 0.70))) /*two colors go in but since we only want black, then make them both black, #000*/, url(img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)) /*two colors go in but since we only want black, then make them both black, #000*/, url(img/hero.jpg);
@@ -220,6 +221,15 @@ header {
     margin-top: 20px;
 }
 
+.logo-black { 
+    display: none; 
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* Main navi */
 .main-nav {
     float: right;
     list-style: none;
@@ -238,7 +248,7 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%; /*becomes 18px*/
-    border-bottom: 2px solid #e67e22 transparent;
+    border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
@@ -247,6 +257,27 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 15px 0;
+    color: #555;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
 
 /*----------------------- */
 /* FEATURES */
