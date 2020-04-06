@@ -617,11 +617,28 @@ footer p {
     margin-top: 20px;
 }
 
+/*----------------------- */
+/* ANIMATIONS */
+/*-----------------------*/
 
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0; /*makes text invisible to be shown with the animation function*/
+    -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+}
 
+.js--wp-4 {
+    -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+}
 
-/* media breakpoints 0-480px, 768, 1024, 1200 */
-
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
 
 
 
